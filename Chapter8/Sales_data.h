@@ -14,17 +14,17 @@ private:
 	unsigned units_sold = 0;
 	double revenue = 0.0;
 	double avg_price() const;
-
+		
 public:
 	//constructors
-	//Sales_data() = default;
+	Sales_data() = default;
 	Sales_data(const string &s, unsigned n, double p) :
 		bookNo(s), units_sold(n), revenue(p*n){}
 	explicit Sales_data(const string &s) :bookNo(s) {}
-	explicit Sales_data(istream& is = cin);//istream and default
+	explicit Sales_data(istream& is);//istream and default
 
 	//functions
-	string isbn()const { return bookNo; }
+	string isbn()const { return bookNo;}
 	Sales_data& combine(const Sales_data&);
 
 	//friend class and functions
