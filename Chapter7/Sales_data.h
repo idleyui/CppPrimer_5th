@@ -17,11 +17,11 @@ private:
 		
 public:
 	//constructors
-	Sales_data() = default;
-	Sales_data(const string &s) :bookNo(s) {}
+	//Sales_data() = default;
 	Sales_data(const string &s, unsigned n, double p) :
 		bookNo(s), units_sold(n), revenue(p*n){}
-	Sales_data(istream& is);
+	explicit Sales_data(const string &s) :bookNo(s) {}
+	explicit Sales_data(istream& is = cin);//istream and default
 
 	//functions
 	string isbn()const { return bookNo;}

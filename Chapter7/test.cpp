@@ -3,7 +3,7 @@
 #include"Window_mgr.h"
 using namespace std;
 
-int main(){
-	Window_mgr win;
-	win.clear(1);
-}
+//int main(){
+//	Window_mgr win;
+//	win.clear(0);
+//}

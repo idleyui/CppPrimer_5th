@@ -2,10 +2,8 @@
 #define SCREEN_H
 #include<iostream>
 #include<string>
-//#include"Window_mgr.h"
 using namespace std;
 
-//extern class Window_mgr;
 class Screen{
 public:
 	typedef std::string::size_type pos;
@@ -28,6 +26,7 @@ public:
 		do_display(os);
 		return *this;
 	}
+	pos size() const;
 	void some_member() const;
 private:
 	pos cursor = 0;
@@ -48,5 +47,8 @@ inline Screen &Screen::set(char c){
 inline Screen &Screen::set(pos r, pos col, char ch){
 	contents[r*width + col] = ch;
 	return *this;
+}
+inline Screen::pos Screen::size() const{
+	return height*width;
 }
 #endif
