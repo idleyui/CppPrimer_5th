@@ -17,9 +17,8 @@ void stringsVec(string f){
 		lineVec.push_back(line);
 	}
 	
-	vector<string>::const_iterator it = lineVec.begin();
-	while (it != lineVec.end()){
-		istringstream iss(*it);
+	for (auto &it: lineVec){
+		istringstream iss(it);
 		string buf;
 		while (iss >> buf){
 			cout << buf;
