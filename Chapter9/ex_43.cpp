@@ -28,16 +28,14 @@ void replaceStr(string &s, string oldVal, string newVal){
 			iter_s++;
 			i++;
 		}
-		
-		
 	}
 }
 
-int main(){
-	string s("abcdabcd");
-	string oldVal("ab");
-	string newVal("xx");
-	replaceStr(s, oldVal, newVal);
-	cout << s;
-	getchar();
-}
+//int main(){
+//	string s("abcdabcd");
+//	string oldVal("ab");
+//	string newVal("xx");
+//	replaceStr(s, oldVal, newVal);
+//	cout << s;
+//	getchar();
+//}
