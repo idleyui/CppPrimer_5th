@@ -14,11 +14,11 @@ vector<int> *getEle(){
 	return intVec;
 }
 
-int main(){
-	vector<int> *intVec = getEle();
-	for (auto i : *intVec){
-		cout << i << "\t";
-	}
-	cout << endl;
-	delete intVec;
-}
+//int main(){
+//	vector<int> *intVec = getEle();
+//	for (auto i : *intVec){
+//		cout << i << "\t";
+//	}
+//	cout << endl;
+//	delete intVec;
+//}
