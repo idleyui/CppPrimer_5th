@@ -24,11 +24,11 @@ void f3(numbered_15 s)
 	cout << s.mysn << endl;
 }
 
-int main()
-{
-	numbered_15 a, b = a, c = b;
-	f2(a); f2(b); f2(c);
-	numbered_15 d, e = d, f = e;
-	f2(d); f2(e); f2(f);
-	getchar();
-}
+//int main()
+//{
+//	numbered_15 a, b = a, c = b;
+//	f2(a); f2(b); f2(c);
+//	numbered_15 d, e = d, f = e;
+//	f2(d); f2(e); f2(f);
+//	getchar();
+//}
