@@ -13,9 +13,9 @@ T compare(const T &v1, const T &v2)
 	return 0;
 }
 
-void main(){
-	double a = 2;
-	double b = 1;
-	cout << compare(a, b);
-	getchar();
-}
+//void main(){
+//	double a = 2;
+//	double b = 1;
+//	cout << compare(a, b);
+//	getchar();
+//}

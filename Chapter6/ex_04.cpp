@@ -7,6 +7,6 @@ int fact(){
 
 	int ret = 1;
 	while (val > 1)
-		ret *= val;
+		ret *= val--;
 	return ret;
 }

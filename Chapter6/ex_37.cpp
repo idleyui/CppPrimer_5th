@@ -16,15 +16,15 @@ decltype(strArr) &retStringDec(string(&strArr)[10]){
 	return strArr;
 }
 
-//int main(){
-//	for (int i = 0; i < 10; i++){
-//		strArr[i] = "a";
-//	}
-//	retStringsName(strArr)[0] = "hi";
-//	retStringTrail(strArr)[1] = "b";
-//	retStringDec(strArr)[2] = "c";
-//	for (int i = 0; i < 10; i++){
-//		cout << strArr[i];
-//	}
-//	getchar();
-//}
+int main() {
+	for (int i = 0; i < 10; i++) {
+		strArr[i] = "a";
+	}
+	retStringsName(strArr)[0] = "hi";
+	retStringTrail(strArr)[1] = "b";
+	retStringDec(strArr)[2] = "c";
+	for (int i = 0; i < 10; i++) {
+		cout << strArr[i];
+	}
+	getchar();
+}
