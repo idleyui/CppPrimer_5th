@@ -2,18 +2,14 @@
 #include<iostream>
 using namespace std;
 
-vector<int>::iterator findValue(vector<int>::iterator begin, vector<int>::iterator end, int value){
-	while (begin != end){
-		if (*begin == value)
-			return begin;
-		begin++;
-	}
-	cout << "can't find the value";
-	return end;
+vector<int>::const_iterator find(vector<int>::const_iterator begin,
+	vector<int>::const_iterator end, int value){
+	while (begin != end && *begin++ != value);
+	return begin;
 }
 
-//int main(){
-//	vector<int> intvec{ 0, 1, 2, 3 };
-//	cout << *findvalue(intvec.begin(), intvec.end(), 2);
-//	getchar();
-//}
+int main() {
+	vector<int> intvec{ 0, 1, 2, 3 };
+	cout << (find(intvec.cbegin(), intvec.cend(), 2) == intvec.cend() ? "not found" : "found");
+	cout << (find(intvec.cbegin(), intvec.cend(), 4) == intvec.cend() ? "not found" : "found");
+}

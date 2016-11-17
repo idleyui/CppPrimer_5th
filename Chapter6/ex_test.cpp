@@ -2,7 +2,19 @@
 #include <string>
 using namespace std;
 
+void func(const int &a) {
+	cout << 3;
+}
+
+void func(int &a) {
+	cout << 1;
+}
+
 int main() {
+	int x;
+	const int z = 1;
+	func(x);
+	func(z);
 	bool boo = false;
 	cout << boo;
 	const int a = 1;

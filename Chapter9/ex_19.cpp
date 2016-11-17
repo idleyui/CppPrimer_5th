@@ -3,22 +3,14 @@
 #include<iostream>
 using namespace std;
 
+int main() {
+	string buf;
+	list<string> l;
+	while (cin >> buf) {
+		l.push_back(buf);
+	}
 
-void putStringToList(string &str){
-	list<char> charList;
-	for (auto &c : str){
-		charList.push_back(c);
-	}
-	for (auto &c : charList){
-		cout << c << endl;
-	}
+	for (auto item = l.cbegin(); item != l.cend(); item++)
+		cout << *item << " ";
+	cout << endl;
 }
-//
-//int main(){
-//	char buf2;
-//	string listStr;
-//	while (cin >> buf2){
-//		listStr.push_back(buf2);
-//	}
-//	putStringToList(listStr);
-//}

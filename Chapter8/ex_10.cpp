@@ -28,7 +28,7 @@ void stringsVec(string f){
 	
 }
 
-int main(){
-	stringsVec("D:\\test\\ex_10.txt");
-	getchar();
-}
+//int main(){
+	//stringsVec("D:\\test\\ex_10.txt");
+	//getchar();
+//}

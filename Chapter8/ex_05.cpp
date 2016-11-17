@@ -4,25 +4,23 @@
 #include<string>
 using namespace std;
 
-vector<string> readWordToVec(string f){
+vector<string> readWordToVec(const string &f) {
 	vector<string> wordVec;
-	ifstream ifs(f);
-	if (ifs){
-		string buf;
-		while (!ifs.eof()){
-			ifs >> buf;
-			wordVec.push_back(buf);
-		}
+	ifstream ifs(f, fstream::in);
+	if (!ifs) {
+		cout << "fail to open the file" << endl;
+		return wordVec;
 	}
-	else{
-		cout << "fail to open the file";
+	while (!ifs.eof()) {
+		string buf;
+		ifs >> buf;
+		wordVec.push_back(buf);
 	}
 	return wordVec;
 }
 
-//int main(){
-//	for (auto i: readWordToVec("D:\\test.txt")){
-//		cout << i << endl;
-//	}
-//	getchar();
-//}
+int main(){
+	for (auto i: readWordToVec("ex_01.cpp")){
+		cout << i << endl;
+	}
+}

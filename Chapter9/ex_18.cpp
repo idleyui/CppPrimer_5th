@@ -4,24 +4,13 @@
 #include<iostream>
 using namespace std;
 
-void putStringToDeque(string &str){
-	deque<char> charDeque;
-	for (auto &c: str){
-		charDeque.push_back(c);
+int main() {
+	deque<string> que;
+	string buf;
+	while (cin >> buf) {
+		que.push_back(buf);
 	}
-	for (auto &c : charDeque){
-		cout << c << endl;
-	}
+	for (auto item = que.cbegin(); item != que.cend(); item++)
+		cout << *item << " ";
+	cout << endl;
 }
-
-
-//int main(){
-//	char buf;
-//	string str;
-//	while (cin >> buf){
-//		str.push_back(buf);
-//	}
-//	putStringToDeque(str);
-//
-//	getchar();
-//}

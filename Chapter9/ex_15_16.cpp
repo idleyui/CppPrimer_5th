@@ -19,11 +19,12 @@ bool vectorIndexEqu(vector<int> &intVec1, int index1, vector<int> &intVec2, int 
 	return false;
 }
 
-//int main(){
-//	vector<int> intVec1{ 1, 2, 3 };
-//	vector<int> intVec2{ 1, 2, 3 };
-//	vector<int> intVec3{ 1 };
-//	cout << vectorEqu(intVec1, intVec2);
-//	cout << vectorBigger(intVec1, intVec3);
-//	getchar();
-//}
+int main(){
+	vector<int> intVec1{ 1, 2, 3 };
+	vector<int> intVec2{ 1, 2, 3 };
+	vector<int> intVec4{ 1, 3, 3 };
+	vector<int> intVec3{ 1 };
+	cout << vectorEqu(intVec1, intVec2);
+	cout << vectorBigger(intVec1, intVec3);
+	cout << vectorBigger(intVec4, intVec1);
+}

@@ -6,7 +6,6 @@ using namespace std;
 
 int testSale(string f){
 	ifstream ifs(f);
-	ofstream ofs(f, ofstream::app);
 	Sales_data total;
 	if (!ifs){
 		cout << "fail to open the file";
@@ -18,11 +17,11 @@ int testSale(string f){
 				total.combine(trans);
 			}
 			else{
-				print(ofs, total) << endl;
+				print(cout, total) << endl;
 				total = trans;
 			}
 		}
-		print(ofs, total) << endl;
+		print(cout, total) << endl;
 	}
 	else{
 		std::cerr << "No data?!" << std::endl;
@@ -31,9 +30,6 @@ int testSale(string f){
 	return 0;
 }
 
-//int main(){
-//	Sales_data data;
-//	string f("D:\\test\\Sale.txt");
-//	testSale(f);
-//	getchar();
-//}
+int main() {
+	testSale("Sale.txt");
+}

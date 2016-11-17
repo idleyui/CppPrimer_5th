@@ -34,7 +34,8 @@ private:
 	std::string contents;
 	mutable int access_ctr;//can be changed even in a const class
 	void do_display(std::ostream &os) const { os << contents; }
-friend class Window_mgr;
+//friend class Window_mgr;
+friend void Window_mgr::clear(ScreenIndex);
 friend void some_member();
 };
 void Screen::some_member() const{
