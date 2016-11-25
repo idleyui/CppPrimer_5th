@@ -16,8 +16,8 @@ void findGreater(vector<string> &words){
 	cout << *iter;
 }
 
-//int main(){
-//	vector<string> vec{ "asd", "dsfsdg", "xvdsfed" };
-//	findGreater(vec);
-//	getchar();
-//}
+int main() {
+	vector<string> vec{ "asd", "dsfsdg", "xvdsfed" };
+	findGreater(vec);
+	getchar();
+}

@@ -4,26 +4,22 @@ using namespace std;
 
 void deleteOdd(forward_list<int> &flist){
 	auto pre = flist.before_begin();
-	auto curr = flist.begin();
-	while (curr != flist.end()){
-		if (*curr % 2 != 0){
-			curr = flist.erase_after(pre);
+	auto item = flist.begin();
+	while (item != flist.end()) {
+		if (*item % 2 != 0)
+			item = flist.erase_after(pre);
+		else {
+			pre = item;
+			++item;
 		}
-		else{
-			pre = curr;
-			curr++;
-		}
+
 	}
 }
 
-//int main(){
-//	forward_list<int> flist{1, 2, 3, 4, 5, 6};
-//	deleteOdd(flist);
-//	auto iter = flist.begin();
-//	while (iter != flist.end()){
-//		cout << *iter << "\t";
-//		iter++;
-//	}
-//	cout << endl;
-//	getchar();
-//}
+int main() {
+	forward_list<int> flist{ 1, 2, 3, 4, 5, 6 };
+	deleteOdd(flist);
+	for (auto item : flist)
+		cout << item;
+	cout << endl;
+}

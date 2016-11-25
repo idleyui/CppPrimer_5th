@@ -16,8 +16,7 @@ void printReverse(vector<int> vec){
 	cout << endl;
 }
 
-//int main(){
-//	vector<int> vec{ 0, 1, 2, 3, 4, 5, 6, 7, 8 };
-//	printReverse(vec);
-//	getchar();
-//}
+int main() {
+	vector<int> vec{ 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+	printReverse(vec);
+}

@@ -5,41 +5,30 @@ using namespace std;
 
 int main(){
 	int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 };
-	vector<int> copyOddVec;
-	list<int> copyEvenList;
+	vector<int> vec(begin(ia), end(ia));
+	list<int> li(begin(ia), end(ia));
 
-	for (auto i : ia){
-		copyOddVec.push_back(i);
-	}
-	for (auto i : ia){
-		copyEvenList.push_back(i);
-	}
-
-	vector<int>::iterator vectorIter = copyOddVec.begin();
-	vector<int>::iterator vectorEnd = copyOddVec.end();
-	while(vectorIter != vectorEnd){
-		if (*vectorIter % 2 == 0)
-			vectorIter = copyOddVec.erase(vectorIter);
+	auto item = vec.begin();
+	while(item != vec.end()){
+		if (*item % 2 == 0)
+			item = vec.erase(item);
 		else
-			vectorIter++;
-		vectorEnd = copyOddVec.end();
+			item++;
 	}
 
-	list<int>::iterator listIter = copyEvenList.begin();
-	list<int>::iterator listEnd = copyEvenList.end();
-	while (listIter != copyEvenList.end()){
-		if (*listIter % 2 != 0)
-			listIter = copyEvenList.erase(listIter);
+	auto litem = li.begin();
+	while (litem != li.end()){
+		if (*litem % 2 != 0)
+			litem = li.erase(litem);
 		else
-			listIter++;
-		listEnd = copyEvenList.end();
+			litem++;
 	}
 
-	for (auto i : copyOddVec)
-		cout << i << "\t";
+	for (auto i : vec)
+		cout << i << " ";
 	cout << endl;
 
-	for (auto i : copyEvenList)
-		cout << i << "\t";
+	for (auto i : li)
+		cout << i << " ";
 	cout << endl;
 }

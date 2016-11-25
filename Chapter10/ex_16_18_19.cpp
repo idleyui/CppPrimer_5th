@@ -13,7 +13,7 @@ vector<string> &elimDups_16(vector<string> &words){
 
 void biggies(vector<string> &words, unsigned sz){
 	elimDups_16(words);
-	stable_sort(words.begin(), words.end(), [](const string &a, const string &b)->bool{return a.size() < b.size(); });
+	stable_sort(words.begin(), words.end(), [](const string &a, const string &b){return a.size() < b.size(); });
 	auto iter = stable_partition(words.begin(), words.end(), [sz](const string &str)->bool{return str.size() < sz; });
 	while (iter != words.end()){
 		std::cout << *iter << "\t";
@@ -21,8 +21,7 @@ void biggies(vector<string> &words, unsigned sz){
 	}
 }
 
-//int main(){
-//	vector<string> words{ "a", "ab", "abcd", "abcde", "asdsdfdg" };
-//	biggies(words, 5);
-//	getchar();
-//}
+int main(){
+	vector<string> words{ "a", "ab", "ab", "abcd", "abcde","abcde", "asdsdfdg" };
+	biggies(words, 5);
+}

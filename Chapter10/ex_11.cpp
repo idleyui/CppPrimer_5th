@@ -21,8 +21,7 @@ void sortElimDups(vector<string> strVec){
 		cout << s << "\t";
 }
 
-//int main(){
-//	vector<string> strVec{ "hi", "sdf", "cvxc", "df" };
-//	sortElimDups(elimDups(strVec));
-//	getchar();
-//}
+int main(){
+	vector<string> strVec{ "hi", "sdf", "cvxc", "df" };
+	sortElimDups(elimDups(strVec));
+}

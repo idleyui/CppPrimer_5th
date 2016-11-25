@@ -27,7 +27,6 @@ void divOddEven(string file, string OddFile, string EvenFile){
 	
 }
 
-//int main(){
-//	divOddEven("test33_1.txt", "test33_2.txt", "test33_3.txt");
-//	getchar();
-//}
+int main(){
+	divOddEven("test33_1.txt", "test33_2.txt", "test33_3.txt");
+}

@@ -6,35 +6,34 @@
 #include<set>
 using namespace std;
 
-string cutString(string str){
-	set<char> cutSet{ ',', '.','\'' };
-	auto iter = str.begin();
-	while (iter != str.end()){
+map<string, int> m;
+
+void cutString(string str){
+	auto begin = str.begin();
+	auto iter = begin;
+
+	auto f = [&]() {if (begin != iter)m[string(begin, iter)]++; };
+
+	for (; iter != str.end(); iter++){
 		tolower(*iter);
-		if (cutSet.find(*iter) != cutSet.end())
-			iter = str.erase(iter);
-		else
-			iter++;
+		if (ispunct(*iter))
+			f(), begin = iter + 1;
 	}
-	return str;
+	if (begin != str.end())	f();
 }
 
 void countWordsNum(string file){
 	ifstream ifs(file);
 	istream_iterator<string> iter(ifs);
 	istream_iterator<string> eof;
-	map<string, int> dic;
-	while (iter != eof){
-		dic[cutString(*iter++)]++;
-	}
-	
-	for (const auto &i : dic){
-		cout << i.first << " occurs " << i.second << " times." << endl;
-	}
-	
+
+	while (iter != eof)	cutString(*iter++);
 }
 
-//int main(){
-//	countWordsNum("test_03.txt");
-//	getchar();
-//}
+int main() {
+	countWordsNum("test_03.txt");
+
+	for (const auto &i : m) {
+		cout << i.first << " occurs " << i.second << " times." << endl;
+	}
+}

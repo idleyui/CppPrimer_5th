@@ -4,23 +4,23 @@
 #include<algorithm>
 using namespace std;
 
-void printVec(vector<string> &words){
+void print(vector<string> &words){
 	for (auto s : words)
 		cout << s << "\t";
 	cout << endl;
 }
 
 void elimDups(vector<string> &words){
-	printVec(words);
+	//print(words);
 	sort(words.begin(), words.end());
 	auto end_unique = unique(words.begin(), words.end());
-	printVec(words);
+	//print(words);
 	words.erase(end_unique, words.end());
-	printVec(words);
+	//print(words);
 }
 
-//int main(){
-//	vector<string> strVec{ "ds", "cv", "ab", "vcb","ab" };
-//	elimDups(strVec);
-//	getchar();
-//}
+int main(){
+	vector<string> strVec{ "ds", "cv", "ab", "vcb","ab" };
+	elimDups(strVec);
+	print(strVec);
+}
